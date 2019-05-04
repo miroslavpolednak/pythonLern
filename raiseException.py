@@ -2,6 +2,6 @@
 try:
 
     raise ValueError("exp was raise")
-    print("Hymiro")
+    print("Hello world")
 except Exception as ex:
     print(ex)
