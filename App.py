@@ -1,3 +1,5 @@
+#This is message from github
+
 # text: str = "Hello \""
 # text2: str = "from python"
 # message: str = f"{text} {len(text)} {text2} {6+6}"
