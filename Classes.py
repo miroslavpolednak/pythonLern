@@ -82,19 +82,29 @@ print(myPerson == myPerson2)
 # example of implementation python container (custom dictionary)
 class DcContainer:
     def __init__(self):
-        self.Tags = {}
+        self.__tags = {}
 
     def Add(self, tag: str):
-        self.Tags[tag.lower()] = self.Tags.get(tag.lower(), 0) + 1
+        # __ is for private property
+        self.__tags[tag.lower()] = self.__tags.get(tag.lower(), 0) + 1
 
     def __getitem__(self, tag):
         """
         This is example of dictionary indexer
         """
-        return self.Tags.get(tag.lower(), 0)
+        return self.__tags.get(tag.lower(), 0)
 
     def __setitem__(self, key: str, value: int):
-        self.Tags[key.lower()] = value
+        self.__tags[key.lower()] = value
+
+    def __len__(self):
+        return len(self.__tags)
+
+    def __iter__(self):
+        """
+        This method alove iteration over tags
+        """
+        return iter(self.__tags)
 
 
 con = DcContainer()
@@ -104,6 +114,13 @@ con.Add("java")
 con.Add("C#")
 con.Add("Python")
 con.Add("Python")
+print(con.__tags)
 # print(con.Tags)
-con["Python"] = 20
-print(con["Python"])
+# con["Python"] = 20
+# print(con["Python"])
+# print(len(con))
+for value in con:
+    print(value)
+
+
+# %%
