@@ -1,4 +1,4 @@
-#This is message from github
+# This is message from github
 
 # text: str = "Hello \""
 # text2: str = "from python"
@@ -54,6 +54,9 @@
 #     print("end")
 
 
+from Modules.Ecommerce.Sales import calcTax
+
+
 def multiple(*items):
     total: int = 1
     for item in items:
@@ -79,3 +82,5 @@ print(fizzBuzz(15))
 
 
 # print(multiple(1, 2, 3, 4, 5, 6))
+
+print(calcTax())
