@@ -58,14 +58,15 @@ if "a" in cell2:
 print(cell.get("Z"))
 print(cell2.get("d", 0))
 # %%
-# comprehention
 items = []
 for item in range(5):
     items.append(item**2)
 print(items)
 
-# better implemention
-items2 = [item**2 for item in range(1000)]
+# %%
+# better implemention with comprehention
+items2 = [item**2 for item in range(10) if item < 6]
+print(items2)
 # %%
 # generation object is good for large dataset, in each
 # iteration create a value
